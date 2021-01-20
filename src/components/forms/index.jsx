@@ -8,7 +8,7 @@ import ContactInfo from './contact_info';
 import ViewInfo from './view';
 
 function Form(){
-    const { state, dispatch }= useContext(FormContext)
+    const { state }= useContext(FormContext)
     return <section className={style.form}>
        <BrowserRouter>
             <Switch>

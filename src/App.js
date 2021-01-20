@@ -18,7 +18,6 @@ const reducer = (state, action) => {
       return {
         ...state,sectionName,activePage
       }
-    break;
     case "savePersonalInfo":
       sectionName = action.sectionName;
       console.log('xxxxx')

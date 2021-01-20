@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Link, useHistory, useRouteMatch } from 'react-router-dom';
+import {  useHistory } from 'react-router-dom';
 import { FormContext } from '../../../App';
 import * as style from './../style.module.css';
 
@@ -10,6 +10,7 @@ function PersonalInfo(){
     const history = useHistory()
     useEffect( ()=> {
         dispatch({type:'changeSection',sectionName, pageNumber });
+        // eslint-disable-next-line
     },[])
 
     const [first_name,setfirst_name] = useState('');

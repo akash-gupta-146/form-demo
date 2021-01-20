@@ -1,13 +1,15 @@
-import { useContext, useEffect, useState } from 'react';
-import { Link, useHistory, useRouteMatch } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
+import {  useHistory } from 'react-router-dom';
 import { FormContext } from '../../../App';
 import * as style from './../style.module.css';
 
 function ViewInfo(){
     const pageNumber = 4;
     const sectionName = 'Form Review';
+    
     useEffect( ()=> {
         dispatch({type:'changeSection',sectionName, pageNumber });
+        // eslint-disable-next-line
     },[])
     const { state, dispatch } = useContext(FormContext)
     const history = useHistory()
@@ -30,6 +32,7 @@ function ViewInfo(){
     }
 
     const getCategory = () => {
+        // eslint-disable-next-line
         return categories.map( category =>{
             if(typeof state[category] === 'object' ){
                 console.log(category, 'sdsdddssdd')
